@@ -2,31 +2,79 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Auto Tax Service</title>
+  <title>Auto-Tax Navigator – Aditya Maheshwari</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../style.css">
+  <style>
+    /* Consistent portfolio layout */
+    body { font-family: 'Open Sans', sans-serif; margin:0; padding:0; color:#333; }
+    header nav { display:flex; gap:1rem; background:#fafafa; padding:1rem; position:sticky; top:0; z-index:10; }
+    header a { text-decoration:none; font-weight:600; color:#555; }
+    header a:hover { color:#000; }
+    .hero { padding:2rem 1rem; text-align:center; background:#e0e7ef; color:#111; }
+    .hero h1 { font-size:2rem; margin-bottom:0.5rem; }
+    .hero p { max-width:600px; margin:auto; line-height:1.6; }
+    main { max-width:800px; margin:2rem auto; padding:0 1rem; }
+    section { margin-bottom:2rem; }
+    h2 { font-size:1.5rem; margin-bottom:0.5rem; color:#111; }
+    ul { margin:0.5rem 0 0 1.25rem; line-height:1.6; }
+    table { width:100%; border-collapse:collapse; margin-top:1rem; }
+    th, td { border:1px solid #ccc; padding:0.5rem; text-align:left; }
+    th { background:#f4f4f4; }
+    a.button { display:inline-block; margin-top:1rem; padding:0.5rem 1rem; background:#007acc; color:#fff; text-decoration:none; border-radius:0.5rem; }
+  </style>
 </head>
 <body>
-<header>
-  <nav>
-    <a href="../index.html">Home</a>
-    <a href="../about.html">About</a>
-    <a href="index.html">Public Sector</a>
-    <a href="../consulting/index.html">Consulting</a>
-    <a href="../teaching/index.html">Teaching</a>
-    <a href="../projects/index.html">Projects</a>
-    <a href="../research/index.html">Research</a>
-  </nav>
-</header>
-<nav class="subnav">
-  <a href="quality-of-life-hub.html">Quality of Life Hub</a>
-  <a href="pco-email-ai-pipeline.html">PCO Email AI Pipeline</a>
-  <a href="auto-tax-service.html">Auto Tax Service</a>
-</nav>
-<main>
-  <h1>Auto Tax Service</h1>
-  <p>Placeholder summary for Auto Tax Service.</p>
-</main>
+  <header>
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="../public-sector/index.html">Public Sector</a>
+      <a href="quality-of-life-hub.html">Quality of Life Hub</a>
+      <a href="pco-email-ai-pipeline.html">Inbox AI Assistant</a>
+      <a href="auto-tax-service.html">Auto-Tax Navigator</a>
+      <a href="../consulting/index.html">Private Sector</a>
+      <a href="../teaching/index.html">Teaching</a>
+      <a href="../projects/index.html">Projects</a>
+      <a href="../research/index.html">Research</a>
+    </nav>
+  </header>
+  <section class="hero">
+    <h1>Auto-Tax Navigator</h1>
+    <p>Prototyped a CRA service to auto-file taxes for Ontario social assistance recipients by leveraging T5007 slip data—identifying underserved non-filers and streamlining benefit receipt.</p>
+  </section>
+  <main>
+    <section>
+      <h2>Executive Summary</h2>
+      <ul>
+        <li>Identified 287,759 Ontario social assistance non-filers in 2021, up from 81,471 in 2018, using T5007 slip data.</li>
+        <li>Reduced barriers by automating tax filing for 200K+ recipients, improving access to benefits and credits.</li>
+        <li>Enabled CRA to target outreach and design low-touch engagement strategies for vulnerable populations.</li>
+      </ul>
+    </section>
+    <section>
+      <h2>Technical Overview</h2>
+      <ul>
+        <li><strong>Data Acquisition:</strong> Ingested provincial T5007 slip files for OntarioWorks, TCAP, and ODSP; standardized fields across provinces.</li>
+        <li><strong>Data Analysis:</strong> Mapped eligibility criteria (age, residency, asset limits) to slip records; computed non-filer counts by year and province.</li>
+        <li><strong>Visualization & Delivery:</strong> Created R-powered dashboards with time-series and province breakdowns; compiled interactive tables for policy teams.</li>
+      </ul>
+      <table>
+        <thead>
+          <tr><th>Year</th><th>Ontario Non-Filers</th><th>Canada Non-Filers</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>2018</td><td>81,471</td><td>97,609</td></tr>
+          <tr><td>2019</td><td>97,470</td><td>113,643</td></tr>
+          <tr><td>2020</td><td>126,510</td><td>154,303</td></tr>
+          <tr><td>2021</td><td>287,759</td><td>379,807</td></tr>
+        </tbody>
+      </table>
+    </section>
+    <section>
+      <h2>Further Reading</h2>
+      <p>Explore detailed provincial breakdowns and project brief:</p>
+      <a class="button" href="/assets/auto_tax_navigator_report.pdf" target="_blank">Download Report PDF</a>
+    </section>
+  </main>
 </body>
 </html>
