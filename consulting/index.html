@@ -2,51 +2,93 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Consulting</title>
+  <title>Private Sector – Aditya Maheshwari</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../style.css">
+  <style>
+    /* Layout matching index and public sector */
+    body {
+      font-family: 'Open Sans', sans-serif;
+      margin: 0; padding: 0;
+      color: #333;
+    }
+    header nav {
+      display: flex; gap: 1rem;
+      background: #fafafa; padding: 1rem;
+      position: sticky; top: 0; z-index: 10;
+    }
+    header a {
+      text-decoration: none; font-weight: 600; color: #555;
+    }
+    header a:hover { color: #000; }
+    .hero {
+      padding: 2rem 1rem;
+      text-align: center;
+      background: #e0e7ef;
+      color: #111;
+    }
+    .hero h1 { font-size: 2rem; margin-bottom: 0.5rem; }
+    .hero p {
+      font-size: 1rem; max-width: 600px;
+      margin: auto; line-height: 1.6;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      padding: 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .card {
+      display: flex; flex-direction: column;
+      background: #fff; padding: 1.5rem;
+      border-radius: 0.75rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      text-decoration: none; color: inherit;
+      transition: transform .2s, box-shadow .2s;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+    }
+    .card h2 { margin-top: 0; margin-bottom: 0.75rem; font-size: 1.5rem; color: #111; }
+    .card p { line-height: 1.6; flex-grow: 1; }
+  </style>
 </head>
 <body>
-<header>
-  <nav>
-    <a href="../index.html">Home</a>
-    <a href="../about.html">About</a>
-    <a href="index.html">Consulting</a>
-    <a href="../consulting/index.html">Consulting</a>
-    <a href="../teaching/index.html">Teaching</a>
-    <a href="../projects/index.html">Projects</a>
-    <a href="../research/index.html">Research</a>
-  </nav>
-</header>
-<main>
-  <h1>Consulting</h1>
-  <section id="about-section">
-    <h2>About this part of my career</h2>
-    <p>I worked on election prediction sentiment pipelines...</p>
+  <header>
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="../about.html">About</a>
+      <a href="../public-sector/index.html">Public Sector</a>
+      <a href="index.html">Private Sector</a>
+      <a href="../teaching/index.html">Teaching</a>
+      <a href="../projects/index.html">Projects</a>
+      <a href="../research/index.html">Research</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Private Sector</h1>
+    <p>After my co-op at Interset, I realized data science thrives as iterative contracts—you tune models, let them run in production, then refine. Here are a few engagements where I drove real-world impact for clients.</p>
   </section>
-  <div class="cards">
-    <a class="card" href="advanced-symbolics.html">
-      <h2>Advanced Symbolics Sentiment Pipeline</h2>
-      <p>I worked on election prediction sentiment pipelines...</p>
+
+  <main class="cards">
+    <a class="card" href="catsa-passenger-prediction.html">
+      <h2>Screening Demand Predictor</h2>
+      <p>Partnered with CATSA to forecast the proportion of passengers requiring screening across major Canadian airports, reducing wait times and optimizing resource allocation.</p>
     </a>
-    <a class="card" href="central-bank-inflation-model.html">
-      <h2>Central Bank Inflation Model</h2>
-      <p>I designed a non-parametric inflation model...</p>
+
+    <a class="card" href="airflow-sentiment-pipeline.html">
+      <h2>Twitter Sentiment Extraction Pipeline</h2>
+      <p>Modernized Advanced Symbolics’ sentiment analysis by migrating a script-driven Twitter pipeline into Apache Airflow—automating workflows and ensuring reliable ML model retraining.</p>
     </a>
-    <a class="card" href="canada-transport-optimization.html">
-      <h2>Canada Transport Optimization</h2>
-      <p>I optimized airport staff allocation...</p>
+
+    <a class="card" href="dga-detection.html">
+      <h2>DGA Threat Detector</h2>
+      <p>Built a classifier for Interset (now OpenText) to detect domain-generation-algorithm malware in log files—deploying a contract-based solution that ran in production and iteratively improved over time.</p>
     </a>
-    <a class="card" href="interset-domain-classifier.html">
-      <h2>Interset Domain Classifier</h2>
-      <p>I developed a domain classification algorithm...</p>
-    </a>
-    <a class="card" href="scotiabank-trading-automation.html">
-      <h2>Scotiabank Trading Automation</h2>
-      <p>I automated daily trading funding management...</p>
-    </a>
-  </div>
-</main>
+  </main>
 </body>
 </html>
