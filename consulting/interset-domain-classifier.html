@@ -2,33 +2,66 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Interset Domain Classifier</title>
+  <title>DGA Threat Detector – Aditya Maheshwari</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../style.css">
+  <style>
+    body { font-family: 'Open Sans', sans-serif; margin:0; padding:0; color:#333; }
+    header nav { display:flex; gap:1rem; background:#fafafa; padding:1rem; position:sticky; top:0; z-index:10; }
+    header a { text-decoration:none; font-weight:600; color:#555; }
+    header a:hover { color:#000; }
+    .hero { padding:2rem 1rem; text-align:center; background:#e0e7ef; color:#111; }
+    .hero h1 { font-size:2rem; margin-bottom:0.5rem; }
+    .hero p { max-width:600px; margin:auto; line-height:1.6; }
+    main { max-width:800px; margin:2rem auto; padding:0 1rem; }
+    section { margin-bottom:2rem; }
+    h2 { font-size:1.5rem; margin-bottom:0.5rem; color:#111; }
+    ul { margin:0.5rem 0 0 1.25rem; line-height:1.6; }
+    a.button { display:inline-block; margin-top:1rem; padding:0.5rem 1rem; background:#007acc; color:#fff; text-decoration:none; border-radius:0.5rem; }
+  </style>
 </head>
 <body>
-<header>
-  <nav>
-    <a href="../index.html">Home</a>
-    <a href="../about.html">About</a>
-    <a href="index.html">Consulting</a>
-    <a href="../consulting/index.html">Consulting</a>
-    <a href="../teaching/index.html">Teaching</a>
-    <a href="../projects/index.html">Projects</a>
-    <a href="../research/index.html">Research</a>
-  </nav>
-</header>
-<nav class="subnav">
-  <a href="advanced-symbolics.html">Advanced Symbolics Sentiment Pipeline</a>
-  <a href="central-bank-inflation-model.html">Central Bank Inflation Model</a>
-  <a href="canada-transport-optimization.html">Canada Transport Optimization</a>
-  <a href="interset-domain-classifier.html">Interset Domain Classifier</a>
-  <a href="scotiabank-trading-automation.html">Scotiabank Trading Automation</a>
-</nav>
-<main>
-  <h1>Interset Domain Classifier</h1>
-  <p>Placeholder summary for Interset Domain Classifier.</p>
-</main>
+  <header>
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="../public-sector/index.html">Public Sector</a>
+      <a href="../consulting/index.html">Private Sector</a>
+      <a href="../teaching/index.html">Teaching</a>
+      <a href="../projects/index.html">Projects</a>
+      <a href="../research/index.html">Research</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>DGA Threat Detector</h1>
+    <p>At Interset (now OpenText), I developed a classifier to detect domain-generation algorithm malware in live log streams—achieving 90% accuracy and enabling real-time threat mitigation.</p>
+  </section>
+
+  <main>
+    <section>
+      <h2>Executive Summary</h2>
+      <ul>
+        <li>Delivered a DGA detection model with 90%+ accuracy, improving incident response times for malware events.</li>
+        <li>Processed billions of DNS requests in real time, flagging malicious domains before they impacted operations.</li>
+        <li>Packaged the solution into a production-ready service, demonstrating immediate ROI through reduced false positives.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Technical Overview</h2>
+      <ul>
+        <li><strong>Streaming Architecture:</strong> Ingested DNS logs via Apache Kafka, performed feature extraction (n-gram and entropy metrics) with Apache NiFi.</li>
+        <li><strong>Modeling & Deployment:</strong> Trained Random Forest classifier on labeled DGA vs. benign domains, exported as PMML for low-latency inference.</li>
+        <li><strong>Integration & Monitoring:</strong> Deployed prediction service in Docker containers, integrated with SIEM dashboards for live alerts and analytics.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Further Reading</h2>
+      <p>Explore the technical details and demo:</p>
+      <a class="button" href="/assets/dga_detector_whitepaper.pdf" target="_blank">Download Whitepaper</a>
+      <a class="button" href="https://github.com/yourrepo/dga-detector" target="_blank">View GitHub Repo</a>
+    </section>
+  </main>
 </body>
 </html>

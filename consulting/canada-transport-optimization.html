@@ -2,33 +2,67 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Canada Transport Optimization</title>
+  <title>Airport Screening Demand Predictor – Aditya Maheshwari</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../style.css">
+  <style>
+    body { font-family: 'Open Sans', sans-serif; margin:0; padding:0; color:#333; }
+    header nav { display:flex; gap:1rem; background:#fafafa; padding:1rem; position:sticky; top:0; z-index:10; }
+    header a { text-decoration:none; font-weight:600; color:#555; }
+    header a:hover { color:#000; }
+    .hero { padding:2rem 1rem; text-align:center; background:#e0e7ef; color:#111; }
+    .hero h1 { font-size:2rem; margin-bottom:0.5rem; }
+    .hero p { max-width:600px; margin:auto; line-height:1.6; }
+    main { max-width:800px; margin:2rem auto; padding:0 1rem; }
+    section { margin-bottom:2rem; }
+    h2 { font-size:1.5rem; margin-bottom:0.5rem; color:#111; }
+    ul { margin:0.5rem 0 0 1.25rem; line-height:1.6; }
+    a.button { display:inline-block; margin-top:1rem; padding:0.5rem 1rem; background:#007acc; color:#fff; text-decoration:none; border-radius:0.5rem; }
+  </style>
 </head>
 <body>
-<header>
-  <nav>
-    <a href="../index.html">Home</a>
-    <a href="../about.html">About</a>
-    <a href="index.html">Consulting</a>
-    <a href="../consulting/index.html">Consulting</a>
-    <a href="../teaching/index.html">Teaching</a>
-    <a href="../projects/index.html">Projects</a>
-    <a href="../research/index.html">Research</a>
-  </nav>
-</header>
-<nav class="subnav">
-  <a href="advanced-symbolics.html">Advanced Symbolics Sentiment Pipeline</a>
-  <a href="central-bank-inflation-model.html">Central Bank Inflation Model</a>
-  <a href="canada-transport-optimization.html">Canada Transport Optimization</a>
-  <a href="interset-domain-classifier.html">Interset Domain Classifier</a>
-  <a href="scotiabank-trading-automation.html">Scotiabank Trading Automation</a>
-</nav>
-<main>
-  <h1>Canada Transport Optimization</h1>
-  <p>Placeholder summary for Canada Transport Optimization.</p>
-</main>
+  <header>
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="../about.html">About</a>
+      <a href="../public-sector/index.html">Public Sector</a>
+      <a href="index.html">Private Sector</a>
+      <a href="../teaching/index.html">Teaching</a>
+      <a href="../projects/index.html">Projects</a>
+      <a href="../research/index.html">Research</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Airport Screening Demand Predictor</h1>
+    <p>Partnered with CATSA to forecast the proportion of passengers requiring screening across major Canadian airports, reducing wait times and optimizing resource allocation.</p>
+  </section>
+
+  <main>
+    <section>
+      <h2>Executive Summary</h2>
+      <ul>
+        <li>Improved passenger experience by predicting screening demand within 5% error across peak and off-peak hours.</li>
+        <li>Enabled dynamic staffing models, reducing passenger wait times by up to 20% at key checkpoints.</li>
+        <li>Delivered actionable forecasts to operations teams via automated dashboards and alerts.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Technical Overview</h2>
+      <ul>
+        <li><strong>Data Integration:</strong> Joined live flight schedules, boarding-scanner logs, and historical throughput data using SQL and Python ETL scripts.</li>
+        <li><strong>Modeling:</strong> Applied non-linear regression and gradient-boosted trees (xgboost) to predict screening rates by terminal and time-of-day.</li>
+        <li><strong>Deployment & Monitoring:</strong> Containerized pipeline with Docker, scheduled via Apache Airflow, and visualized in Tableau with custom KPI alerts.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Further Reading</h2>
+      <p>Access detailed methodology and sample dashboards:</p>
+      <a class="button" href="/assets/catsa_screening_report.pdf" target="_blank">Download Project Report</a>
+      <a class="button" href="https://github.com/yourrepo/catsa-screening" target="_blank">View Code on GitHub</a>
+    </section>
+  </main>
 </body>
 </html>

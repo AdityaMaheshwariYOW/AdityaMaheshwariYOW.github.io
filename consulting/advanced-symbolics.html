@@ -2,33 +2,91 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Advanced Symbolics Sentiment Pipeline</title>
+  <title>Sentiment Streamliner – Aditya Maheshwari</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../style.css">
+  <style>
+    body { font-family: 'Open Sans', sans-serif; margin:0; padding:0; color:#333; }
+    header nav { display:flex; gap:1rem; background:#fafafa; padding:1rem; position:sticky; top:0; z-index:10; }
+    header a { text-decoration:none; font-weight:600; color:#555; }
+    header a:hover { color:#000; }
+    .hero { padding:2rem 1rem; text-align:center; background:#e0e7ef; color:#111; }
+    .hero h1 { font-size:2rem; margin-bottom:0.5rem; }
+    .hero p { max-width:600px; margin:auto; line-height:1.6; }
+    main { max-width:800px; margin:2rem auto; padding:0 1rem; }
+    section { margin-bottom:2rem; }
+    h2 { font-size:1.5rem; margin-bottom:0.5rem; color:#111; }
+    ul { margin:0.5rem 0 0 1.25rem; line-height:1.6; }
+    a.button { display:inline-block; margin-top:1rem; padding:0.5rem 1rem; background:#007acc; color:#fff; text-decoration:none; border-radius:0.5rem; }
+    /* Cards for related projects */
+    .cards { display:grid; grid-template-columns:repeat(auto-fit, minmax(280px,1fr)); gap:1rem; padding-top:1rem; }
+    .card { background:#fff; padding:1.5rem; border-radius:0.75rem; box-shadow:0 2px 8px rgba(0,0,0,0.05); text-decoration:none; color:inherit; transition:transform .2s,box-shadow .2s; display:flex; flex-direction:column; }
+    .card:hover { transform:translateY(-4px); box-shadow:0 4px 16px rgba(0,0,0,0.1); }
+    .card h3 { margin:0 0 0.5rem; font-size:1.25rem; color:#111; }
+    .card p { margin:0; line-height:1.4; flex-grow:1; }
+  </style>
 </head>
 <body>
-<header>
-  <nav>
-    <a href="../index.html">Home</a>
-    <a href="../about.html">About</a>
-    <a href="index.html">Consulting</a>
-    <a href="../consulting/index.html">Consulting</a>
-    <a href="../teaching/index.html">Teaching</a>
-    <a href="../projects/index.html">Projects</a>
-    <a href="../research/index.html">Research</a>
-  </nav>
-</header>
-<nav class="subnav">
-  <a href="advanced-symbolics.html">Advanced Symbolics Sentiment Pipeline</a>
-  <a href="central-bank-inflation-model.html">Central Bank Inflation Model</a>
-  <a href="canada-transport-optimization.html">Canada Transport Optimization</a>
-  <a href="interset-domain-classifier.html">Interset Domain Classifier</a>
-  <a href="scotiabank-trading-automation.html">Scotiabank Trading Automation</a>
-</nav>
-<main>
-  <h1>Advanced Symbolics Sentiment Pipeline</h1>
-  <p>Placeholder summary for Advanced Symbolics Sentiment Pipeline.</p>
-</main>
+  <header>
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="../about.html">About</a>
+      <a href="../public-sector/index.html">Public Sector</a>
+      <a href="../consulting/index.html">Private Sector</a>
+      <a href="../teaching/index.html">Teaching</a>
+      <a href="../projects/index.html">Projects</a>
+      <a href="../research/index.html">Research</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Sentiment Streamliner</h1>
+    <p>At Advanced Symbolics, I migrated a script-driven Twitter sentiment pipeline into Apache Airflow—automating data ingestion, model retraining, and delivering production-grade insights for election forecasting.</p>
+  </section>
+
+  <main>
+    <section>
+      <h2>Executive Summary</h2>
+      <ul>
+        <li>Streamlined social media sentiment analysis by automating ETL and model retraining workflows, reducing manual effort by 75%.</li>
+        <li>Enabled near-real-time sentiment dashboards, empowering stakeholders to track public opinion trends during critical events.</li>
+        <li>Improved pipeline reliability and scalability, handling 10M+ tweets per day without manual intervention.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Technical Overview</h2>
+      <ul>
+        <li><strong>Workflow Orchestration:</strong> Rebuilt Python scripts into modular Airflow DAGs; scheduled daily ingestion, preprocessing, and model retraining tasks.</li>
+        <li><strong>Data Processing:</strong> Cleaned and tokenized tweet streams, aggregated sentiment scores via VADER and custom lexicons in Spark.</li>
+        <li><strong>Monitoring & Visualization:</strong> Integrated Airflow alerts with Slack; visualized key metrics in Tableau with automated refreshes.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Further Reading</h2>
+      <p>View the Airflow DAG and sample dashboards:</p>
+      <a class="button" href="/assets/sentiment_streamliner_dag.py" target="_blank">Download DAG Script</a>
+      <a class="button" href="https://github.com/yourrepo/sentiment-streamliner" target="_blank">View GitHub Repo</a>
+    </section>
+
+    <section>
+      <h2>Other Private Sector Projects</h2>
+      <div class="cards">
+        <a class="card" href="catsa-passenger-prediction.html">
+          <h3>Screening Demand Predictor</h3>
+          <p>Forecasted passenger screening demand across Canadian airports to optimize staffing and reduce wait times.</p>
+        </a>
+        <a class="card" href="interset-dga-detection.html">
+          <h3>DGA Threat Detector</h3>
+          <p>Classified domain-generation algorithm malware in live log streams with 90% accuracy for real-time threat mitigation.</p>
+        </a>
+        <a class="card" href="airflow-sentiment-pipeline.html">
+          <h3>Sentiment Streamliner</h3>
+          <p>Automated Twitter sentiment analysis in Airflow for election prediction and public opinion tracking.</p>
+        </a>
+      </div>
+    </section>
+  </main>
 </body>
 </html>
