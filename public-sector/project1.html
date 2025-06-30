@@ -1,28 +1,100 @@
 <!DOCTYPE html>
-<html>
-<head><title>Public-Sector - Project1</title></head>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Public Sector – Project 1</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+</head>
 <body>
 
-<header>
-  <nav style="background-color:#333;padding:10px;">
-    <a href="/index.html" style="color:white;margin-right:15px;">Home</a>
-    <a href="/about.html" style="color:white;margin-right:15px;">About</a>
-    <a href="/public-sector/project1.html" style="color:white;margin-right:15px;">Public Sector</a>
-    <a href="/consulting/project1.html" style="color:white;margin-right:15px;">Consulting</a>
-    <a href="/teaching/project1.html" style="color:white;margin-right:15px;">Teaching</a>
-    <a href="/projects/project1.html" style="color:white;margin-right:15px;">Projects</a>
-    <a href="/research/project1.html" style="color:white;margin-right:15px;">Research</a>
+  <!-- top nav -->
+  <header>
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="../about.html">About</a>
+      <a href="project1.html">Public Sector</a>
+      <a href="../consulting/project1.html">Consulting</a>
+      <a href="../teaching/project1.html">Teaching</a>
+      <a href="../projects/project1.html">Projects</a>
+      <a href="../research/project1.html">Research</a>
+    </nav>
+  </header>
+
+  <!-- section sub-nav -->
+  <nav class="subnav">
+    <a href="project1.html">Project 1</a>
+    <a href="project2.html">Project 2</a>
+    <a href="project3.html">Project 3</a>
   </nav>
-</header>
 
+  <main>
+    <!-- Executive summary for a CEO/general audience -->
+    <section id="executive-summary">
+      <h1>Executive Summary</h1>
+      <p>
+        We built a proof-of-concept AI pipeline that ingests millions of emails addressed to the Prime 
+        Minister’s office, dynamically extracting key topics and sentiment to generate daily intelligence 
+        reports. This automated solution surfaces real-time insights into grassroots public concerns—helping 
+        senior leaders respond faster, improve transparency, and boost public trust.
+      </p>
+    </section>
 
-<nav style="background-color:#eee;padding:10px;">
-  <a href="/public-sector/project1.html" style="margin-right:10px;">Project 1</a>
-  <a href="/public-sector/project2.html" style="margin-right:10px;">Project 2</a>
-  <a href="/public-sector/project3.html">Project 3</a>
-</nav>
+    <!-- Technical details for a CTO -->
+    <section id="technical-details">
+      <h2>Technical Overview</h2>
+      <ul>
+        <li>
+          <strong>Data Ingestion & Storage:</strong>  
+          Emails are streamed into an Azure Delta Lake via Databricks, cleaned (anonymized, de-duped) and 
+          stored in parquet format.
+        </li>
+        <li>
+          <strong>Classification Models:</strong>  
+          ─ A suite of transformer classifiers (CardiffNLP RoBERTa for sentiment, BERT-based hate/toxicity, 
+          and custom spam detectors) flags each email as <em>substantive</em>, <em>spam</em>, or 
+          <em>write-in</em>.
+        </li>
+        <li>
+          <strong>Topic Modeling:</strong>  
+          BERTopic clusters substantive emails into emergent themes, extracting top keywords per cluster.
+        </li>
+        <li>
+          <strong>Reporting Pipeline:</strong>  
+          A scheduled Databricks job runs daily, writes aggregated metrics to PowerBI for dashboarding, and 
+          publishes static HTML reports to GitHub Pages.
+        </li>
+        <li>
+          <strong>Feedback Loop:</strong>  
+          Analysts use a lightweight web app to correct model outputs (language, spam, topic labels), with 
+          those corrections feeding back into periodic retraining jobs.
+        </li>
+      </ul>
+    </section>
 
-<h1>Public Sector - Project1</h1>
-<p>Description of project1 in public-sector.</p>
+    <!-- Further reading / links -->
+    <section id="further-reading">
+      <h2>Further Reading</h2>
+      <ul>
+        <li>
+          <a href="https://medium.com/…/artificial-intelligence-case-study-in-the-public-service" target="_blank">
+            Original Medium Article: “Artificial Intelligence Case Study in the Public Service”
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/yourusername/pco-email-ai-poc" target="_blank">
+            GitHub Repo (code & configs)
+          </a>
+        </li>
+        <li>
+          <a href="https://yourcompany.sharepoint.com/…/PCO-Technical-Doc.pdf" target="_blank">
+            Full Technical Documentation (PDF)
+          </a>
+        </li>
+      </ul>
+    </section>
+  </main>
+
 </body>
 </html>
