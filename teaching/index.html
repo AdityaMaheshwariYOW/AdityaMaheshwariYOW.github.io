@@ -2,43 +2,98 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Teaching</title>
+  <title>Teaching – Aditya Maheshwari</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../style.css">
+  <style>
+    /* Consistent layout */
+    body {
+      font-family: 'Open Sans', sans-serif;
+      margin: 0; padding: 0;
+      color: #333;
+    }
+    header nav {
+      display: flex; gap: 1rem;
+      background: #fafafa; padding: 1rem;
+      position: sticky; top: 0; z-index: 10;
+    }
+    header a {
+      text-decoration: none; font-weight: 600; color: #555;
+    }
+    header a:hover { color: #000; }
+    .hero {
+      padding: 2rem 1rem;
+      text-align: center;
+      background: #e0e7ef;
+      color: #111;
+    }
+    .hero h1 { font-size: 2rem; margin-bottom: 0.5rem; }
+    .hero p {
+      font-size: 1rem; max-width: 600px;
+      margin: auto; line-height: 1.6;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      padding: 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .card {
+      background: #fff; padding: 1.5rem;
+      border-radius: 0.75rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      text-decoration: none; color: inherit;
+      transition: transform .2s, box-shadow .2s;
+      display: flex; flex-direction: column;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+    }
+    .card h2 { margin-top: 0; margin-bottom: 0.75rem; font-size: 1.5rem; color: #111; }
+    .card p { line-height: 1.6; flex-grow: 1; }
+  </style>
 </head>
 <body>
-<header>
-  <nav>
-    <a href="../index.html">Home</a>
-    <a href="../about.html">About</a>
-    <a href="index.html">Teaching</a>
-    <a href="../consulting/index.html">Consulting</a>
-    <a href="../teaching/index.html">Teaching</a>
-    <a href="../projects/index.html">Projects</a>
-    <a href="../research/index.html">Research</a>
-  </nav>
-</header>
-<main>
-  <h1>Teaching</h1>
-  <section id="about-section">
-    <h2>About this part of my career</h2>
-    <p>I taught AI & ML to professionals at McCombs...</p>
+  <header>
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="../about.html">About</a>
+      <a href="../public-sector/index.html">Public Sector</a>
+      <a href="../consulting/index.html">Private Sector</a>
+      <a href="index.html">Teaching</a>
+      <a href="../projects/index.html">Projects</a>
+      <a href="../research/index.html">Research</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Teaching</h1>
+    <p>I transform complex data concepts into engaging learning experiences—from introductory bootcamps to advanced AI courses—empowering diverse learners across institutions and topics.</p>
   </section>
-  <div class="cards">
-    <a class="card" href="texas-ai-ml.html">
-      <h2>Texas AI & ML Bootcamp</h2>
-      <p>I taught AI & ML to professionals at McCombs...</p>
+
+  <main class="cards">
+    <a class="card" href="carleton-bootcamp.html">
+      <h2>Carleton Analytics Bootcamp</h2>
+      <p>Designed and led a 4-week, 2‑hour/day summer program introducing undergrads to machine learning fundamentals, then expanded the curriculum by training and managing sub-instructors.</p>
     </a>
-    <a class="card" href="uottawa-analytics.html">
-      <h2>UOttawa Analytics Course</h2>
-      <p>I managed analytics courses at University of Ottawa...</p>
+
+    <a class="card" href="uottawa-analytics-bootcamp.html">
+      <h2>UOttawa Intro to Analytics</h2>
+      <p>Scaled the advanced-analytics bootcamp to the University of Ottawa—delivering intensive hands-on courses and refining content to suit a broader student audience.</p>
     </a>
-    <a class="card" href="carleton-enterprise-ml.html">
-      <h2>Carleton Enterprise ML Bootcamp</h2>
-      <p>I led Enterprise ML bootcamps at Carleton...</p>
+
+    <a class="card" href="utexas-ai-course.html">
+      <h2>UTexas Professional AI</h2>
+      <p>Developed and taught an industry-focused AI course at the University of Texas, covering cutting-edge machine learning engineering practices for working professionals.</p>
     </a>
-  </div>
-</main>
+
+    <a class="card" href="one-off-courses.html">
+      <h2>Specialized Workshops</h2>
+      <p>Delivered one-off courses in Sustainability Analytics and Ocean Analytics—bridging data science techniques with domain-specific challenges in environmental fields.</p>
+    </a>
+  </main>
 </body>
 </html>

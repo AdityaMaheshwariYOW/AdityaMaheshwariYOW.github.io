@@ -2,43 +2,108 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Research</title>
+  <title>Research – Aditya Maheshwari</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../style.css">
+  <style>
+    /* Consistent layout */
+    body {
+      font-family: 'Open Sans', sans-serif;
+      margin: 0; padding: 0;
+      color: #333;
+    }
+    header nav {
+      display: flex; gap: 1rem;
+      background: #fafafa; padding: 1rem;
+      position: sticky; top: 0; z-index: 10;
+    }
+    header a {
+      text-decoration: none; font-weight: 600; color: #555;
+    }
+    header a:hover { color: #000; }
+    .hero {
+      padding: 2rem 1rem;
+      text-align: center;
+      background: #e0e7ef;
+      color: #111;
+    }
+    .hero h1 { font-size: 2rem; margin-bottom: 0.5rem; }
+    .hero p {
+      font-size: 1rem; max-width: 600px;
+      margin: auto; line-height: 1.6;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      padding: 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .card {
+      background: #fff; padding: 1.5rem;
+      border-radius: 0.75rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      text-decoration: none; color: inherit;
+      transition: transform .2s, box-shadow .2s;
+      display: flex; flex-direction: column;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+    }
+    .card h2 { margin-top: 0; margin-bottom: 0.75rem; font-size: 1.5rem; color: #111; }
+    .card p { line-height: 1.6; flex-grow: 1; }
+  </style>
 </head>
 <body>
-<header>
-  <nav>
-    <a href="../index.html">Home</a>
-    <a href="../about.html">About</a>
-    <a href="index.html">Research</a>
-    <a href="../consulting/index.html">Consulting</a>
-    <a href="../teaching/index.html">Teaching</a>
-    <a href="../projects/index.html">Projects</a>
-    <a href="../research/index.html">Research</a>
-  </nav>
-</header>
-<main>
-  <h1>Research</h1>
-  <section id="about-section">
-    <h2>About this part of my career</h2>
-    <p>I applied causal forests to improve RCT generalizability...</p>
+  <header>
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="../about.html">About</a>
+      <a href="../public-sector/index.html">Public Sector</a>
+      <a href="../consulting/index.html">Private Sector</a>
+      <a href="../teaching/index.html">Teaching</a>
+      <a href="../projects/index.html">Projects</a>
+      <a href="index.html">Research</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Research</h1>
+    <p>School taught me the power of structured inquiry—so I continued taking courses and working as a Research Assistant to deepen my insights. Here are select projects where I bridged theory and practice.</p>
   </section>
-  <div class="cards">
-    <a class="card" href="camfed-rct-analysis.html">
-      <h2>CAMFED RCT Analysis</h2>
-      <p>I applied causal forests to improve RCT generalizability...</p>
+
+  <main class="cards">
+    <a class="card" href="camfed-impact-analysis.html">
+      <h2>CAMFED Impact Study</h2>
+      <p>Evaluated the long-term effects of girls’ educational programs in Sub-Saharan Africa, combining causal inference with survey data to guide non-profit strategy.</p>
     </a>
-    <a class="card" href="alberta-health-survey-analysis.html">
-      <h2>Alberta Health Survey Analysis</h2>
-      <p>I evaluated AI techniques on open-text survey data...</p>
+
+    <a class="card" href="alberta-health-text-analysis.html">
+      <h2>Health Feedback Mining</h2>
+      <p>Applied topic modelling to open-text responses in Alberta Health surveys—surfacing key themes in patient feedback to inform public health policy.</p>
     </a>
-    <a class="card" href="book-chapter-contributions.html">
-      <h2>Book Chapter Contributions</h2>
-      <p>I contributed book chapters on clustering and data engineering...</p>
+
+    <a class="card" href="masters-rl-traffic.html">
+      <h2>RL Traffic Control</h2>
+      <p>In my Master’s thesis, deployed Deep Reinforcement Learning to optimize traffic flow on highway networks—demonstrating significant congestion reduction in simulations.</p>
     </a>
-  </div>
-</main>
+
+    <a class="card" href="employment-insurance-analysis.html">
+      <h2>EI Claim Dynamics</h2>
+      <p>Modeled Employment Insurance uptake patterns using administrative data—identifying determinants of claim duration and policy implications during economic downturns.</p>
+    </a>
+
+    <a class="card" href="rupee-demonetization-study.html">
+      <h2>Rupee Demonetization Economics</h2>
+      <p>Assessed India's 2016 demonetization impact using causal forests on transaction data—uncovering varied effects across regions and income groups.</p>
+    </a>
+
+    <a class="card" href="book-chapters.html">
+      <h2>Scholarly Contributions</h2>
+      <p>Co-authored book chapters on data-driven policymaking and developmental economics—translating complex methodologies into actionable frameworks.</p>
+    </a>
+  </main>
 </body>
 </html>

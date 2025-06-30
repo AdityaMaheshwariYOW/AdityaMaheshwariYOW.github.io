@@ -2,43 +2,93 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Projects</title>
+  <title>Projects – Aditya Maheshwari</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../style.css">
+  <style>
+    /* Portfolio-wide layout */
+    body {
+      font-family: 'Open Sans', sans-serif;
+      margin: 0; padding: 0;
+      color: #333;
+    }
+    header nav {
+      display: flex; gap: 1rem;
+      background: #fafafa; padding: 1rem;
+      position: sticky; top: 0; z-index: 10;
+    }
+    header a {
+      text-decoration: none; font-weight: 600; color: #555;
+    }
+    header a:hover { color: #000; }
+    .hero {
+      padding: 2rem 1rem;
+      text-align: center;
+      background: #e0e7ef;
+      color: #111;
+    }
+    .hero h1 { font-size: 2rem; margin-bottom: 0.5rem; }
+    .hero p {
+      font-size: 1rem; max-width: 600px;
+      margin: auto; line-height: 1.6;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      padding: 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .card {
+      background: #fff; padding: 1.5rem;
+      border-radius: 0.75rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      text-decoration: none; color: inherit;
+      transition: transform .2s, box-shadow .2s;
+      display: flex; flex-direction: column;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+    }
+    .card h2 { margin-top: 0; margin-bottom: 0.75rem; font-size: 1.5rem; color: #111; }
+    .card p { line-height: 1.6; flex-grow: 1; }
+  </style>
 </head>
 <body>
-<header>
-  <nav>
-    <a href="../index.html">Home</a>
-    <a href="../about.html">About</a>
-    <a href="index.html">Projects</a>
-    <a href="../consulting/index.html">Consulting</a>
-    <a href="../teaching/index.html">Teaching</a>
-    <a href="../projects/index.html">Projects</a>
-    <a href="../research/index.html">Research</a>
-  </nav>
-</header>
-<main>
-  <h1>Projects</h1>
-  <section id="about-section">
-    <h2>About this part of my career</h2>
-    <p>I designed an app to nudge users on posture using time series forecasting...</p>
+  <header>
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="../about.html">About</a>
+      <a href="../public-sector/index.html">Public Sector</a>
+      <a href="../consulting/index.html">Private Sector</a>
+      <a href="../teaching/index.html">Teaching</a>
+      <a href="index.html">Projects</a>
+      <a href="../research/index.html">Research</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Projects</h1>
+    <p>After learning on-the-job through teaching and consulting, I now focus on building standalone products to maximize creative control and explore new ideas end-to-end.</p>
   </section>
-  <div class="cards">
-    <a class="card" href="posture-nudge-app.html">
-      <h2>Posture Nudge App</h2>
-      <p>I designed an app to nudge users on posture using time series forecasting...</p>
+
+  <main class="cards">
+    <a class="card" href="social-tracking.html">
+      <h2>Social Tracker</h2>
+      <p>Automates check-ins via Google Apps Script and Calendar—helping users stay connected by scheduling routine outreach, logging interactions, and visualizing social touchpoints over time.</p>
     </a>
-    <a class="card" href="rl-traffic-congestion.html">
-      <h2>RL Traffic Congestion Thesis</h2>
-      <p>My masters thesis on RL to reduce traffic congestion...</p>
+
+    <a class="card" href="posture-correction.html">
+      <h2>Posture Predictor</h2>
+      <p>Built a posture-correction app using LSTMs and rotation sensors to analyze long-term trends—providing real-time feedback and visual insights to improve ergonomic habits.</p>
     </a>
-    <a class="card" href="poster-presentation.html">
-      <h2>Conference Poster Presentation</h2>
-      <p>Presented research posters on user behaviour...</p>
+
+    <a class="card" href="expense-tracker.html">
+      <h2>AI Expense Manager</h2>
+      <p>Developed an expense tracker powered by LLMs—parsing user notes to auto-categorize transactions, generate reports, and deliver personalized budgeting insights.</p>
     </a>
-  </div>
-</main>
+  </main>
 </body>
 </html>
