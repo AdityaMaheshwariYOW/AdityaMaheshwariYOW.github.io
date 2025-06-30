@@ -5,7 +5,66 @@
   <title>Public Sector – Aditya Maheshwari</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../style.css">
+  <style>
+    /* Layout from index for consistency */
+    body {
+      font-family: 'Open Sans', sans-serif;
+      margin: 0; padding: 0;
+      color: #333;
+    }
+    header nav {
+      display: flex; gap: 1rem;
+      background: #fafafa; padding: 1rem;
+      position: sticky; top: 0; z-index: 10;
+    }
+    header a {
+      text-decoration: none; font-weight: 600; color: #555;
+    }
+    header a:hover { color: #000; }
+    /* Hero styling */
+    .hero {
+      padding: 2rem 1rem;
+      text-align: center;
+      background: #e0e7ef;
+      color: #111;
+    }
+    .hero h1 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+    .hero p {
+      font-size: 1rem;
+      max-width: 600px;
+      margin: auto;
+      line-height: 1.6;
+    }
+    /* Cards layout (inherited from index) */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      padding: 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .card {
+      display: flex; flex-direction: column;
+      background: #fff; padding: 1.5rem;
+      border-radius: 0.75rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      text-decoration: none; color: inherit;
+      transition: transform .2s, box-shadow .2s;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+    }
+    .card h2 {
+      margin-top: 0; margin-bottom: 0.75rem;
+      font-size: 1.5rem; color: #111;
+    }
+    .card p { line-height: 1.6; flex-grow: 1; }
+  </style>
 </head>
 <body>
   <header>
@@ -20,17 +79,15 @@
     </nav>
   </header>
 
-  <!-- Hero section with improved contrast -->
-  <section class="hero" style="padding: 2rem 1rem; text-align: center; background: #e0e7ef; color: #111;">
-    <h1 style="font-size:2rem; margin-bottom:0.5rem;">Public Sector</h1>
-    <p style="font-size:1rem; max-width:600px; margin:auto; line-height:1.6;">
+  <section class="hero">
+    <h1>Public Sector</h1>
+    <p>
       In government roles, I’ve had the chance to understand massive citizen–policy feedback loops and spotted gaps in existing frameworks. All the problems are about turning citizen feedback into actionable policy insights, while also understanding the long timeline for change, navigating large organizations, and translating technical solutions for non-technical stakeholders.
     </p>
   </section>
 
   <main class="cards">
-    
-    <a class="card" href="quality-of-life-hub.html">
+    <a class="card" href="auto-tax-service.html">
       <h2>Quality of Life Hub</h2>
       <p>
         Led development of Statistics Canada’s user-facing Quality of Life Hub: transforming raw social data into interactive dashboards that give Canadians and policymakers real-time insights into well-being trends.
