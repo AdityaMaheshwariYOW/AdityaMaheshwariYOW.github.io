@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>PCO Email AI Pipeline</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+  <header>
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="../about.html">About</a>
+      <a href="quality-of-life-hub.html">Public Sector</a>
+      <a href="../consulting/advanced-symbolics.html">Consulting</a>
+      <a href="../teaching/texas-ai-ml.html">Teaching</a>
+      <a href="../projects/posture-nudge-app.html">Projects</a>
+      <a href="../research/camfed-rct-analysis.html">Research</a>
+    </nav>
+  </header>
+
+  <nav class="subnav">
+    <a href="quality-of-life-hub.html">Project 1</a>
+    <a href="pco-email-ai-pipeline.html">Project 2</a>
+    <a href="auto-tax-service.html">Project 3</a>
+  </nav>
+
+  <main>
+    <h1>PCO Email AI Pipeline</h1>
+
+    <h2>Executive Summary</h2>
+    <p>
+      Built a scalable ML pipeline in Azure Databricks and PowerBI that processes ~10,000 daily emails to the PMO, extracting topics and sentiment to inform senior leadership in real time.
+    </p>
+
+    <h2>Technical Overview</h2>
+    <ul>
+      <li><strong>Ingestion:</strong> Databricks → Azure Delta Lake; cleaned & anonymized</li>
+      <li><strong>Models:</strong> RoBERTa sentiment, BERT-spam/toxicity, BERTopic clustering</li>
+      <li><strong>Reporting:</strong> Automated daily HTML + PowerBI dashboards</li>
+      <li><strong>Feedback Loop:</strong> Web app for analysts to correct labels & retrain models</li>
+    </ul>
+
+    <h2>Further Reading</h2>
+    <ul>
+      <li><a href="https://medium.com/…/artificial-intelligence-case-study" target="_blank">Medium case study</a></li>
+      <li><a href="https://github.com/username/pco-email-ai-pipeline" target="_blank">GitHub repo</a></li>
+    </ul>
+  </main>
+
+</body>
+</html>
