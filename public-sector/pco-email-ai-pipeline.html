@@ -2,31 +2,84 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>PCO Email AI Pipeline</title>
+  <title>Inbox AI Assistant – Aditya Maheshwari</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../style.css">
+  <style>
+    /* Consistent portfolio layout */
+    body {
+      font-family: 'Open Sans', sans-serif;
+      margin: 0; padding: 0;
+      color: #333;
+    }
+    header nav {
+      display: flex; gap: 1rem;
+      background: #fafafa; padding: 1rem;
+      position: sticky; top: 0; z-index: 10;
+    }
+    header a { text-decoration: none; font-weight: 600; color: #555; }
+    header a:hover { color: #000; }
+    .hero {
+      padding: 2rem 1rem; text-align: center;
+      background: #e0e7ef; color: #111;
+    }
+    .hero h1 { font-size: 2rem; margin-bottom: 0.5rem; }
+    .hero p { max-width: 600px; margin: auto; line-height: 1.6; }
+    main { max-width: 800px; margin: 2rem auto; padding: 0 1rem; }
+    section { margin-bottom: 2rem; }
+    h2 { font-size: 1.5rem; margin-bottom: 0.5rem; color: #111; }
+    ul { margin: 0.5rem 0 0 1.25rem; line-height: 1.6; }
+    a.button {
+      display: inline-block; margin-top: 1rem; padding: 0.5rem 1rem;
+      background: #007acc; color: #fff; text-decoration: none;
+      border-radius: 0.5rem;
+    }
+  </style>
 </head>
 <body>
-<header>
-  <nav>
-    <a href="../index.html">Home</a>
-    <a href="../about.html">About</a>
-    <a href="index.html">Public Sector</a>
-    <a href="../consulting/index.html">Consulting</a>
-    <a href="../teaching/index.html">Teaching</a>
-    <a href="../projects/index.html">Projects</a>
-    <a href="../research/index.html">Research</a>
-  </nav>
-</header>
-<nav class="subnav">
-  <a href="quality-of-life-hub.html">Quality of Life Hub</a>
-  <a href="pco-email-ai-pipeline.html">PCO Email AI Pipeline</a>
-  <a href="auto-tax-service.html">Auto Tax Service</a>
-</nav>
-<main>
-  <h1>PCO Email AI Pipeline</h1>
-  <p>Placeholder summary for PCO Email AI Pipeline.</p>
-</main>
+  <header>
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="../public-sector/index.html">Public Sector</a>
+      <a href="pco-email-ai-pipeline.html">Inbox AI Assistant</a>
+      <a href="auto-tax-service.html">Auto-Tax Navigator</a>
+      <a href="quality-of-life-hub.html">Quality of Life Hub</a>
+      <a href="../consulting/index.html">Private Sector</a>
+      <a href="../teaching/index.html">Teaching</a>
+      <a href="../projects/index.html">Projects</a>
+      <a href="../research/index.html">Research</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Inbox AI Assistant</h1>
+    <p>At the Privy Council Office, I built a scalable AI pipeline to parse ~10,000 daily emails to the Prime Minister—transforming raw messages into actionable insights for government communications.</p>
+  </section>
+
+  <main>
+    <section>
+      <h2>Executive Summary</h2>
+      <ul>
+        <li>Developed a robust ML workflow to classify topics and sentiment in ~10K PMO emails daily, enabling rapid policy insight.</li>
+        <li>Presented outcomes at Code for America Summit 2024, demonstrating government-grade AI to public-sector peers.</li>
+        <li>Established reusable infrastructure and best practices for future ML initiatives across federal departments.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Technical Overview</h2>
+      <ul>
+        <li><strong>Data Ingestion & Preprocessing:</strong> Automated email retrieval via secure API, preprocessed text in Databricks/Spark (tokenization, stop-word removal).</li>
+        <li><strong>Modeling & NLP:</strong> Utilized BERTopic for dynamic topic extraction; fine-tuned HuggingFace transformers for sentiment classification.</li>
+        <li><strong>Deployment & Monitoring:</strong> Packaged inference as Azure Functions, scheduled retraining via Azure ML Pipelines, visualized results in PowerBI with custom alerts.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Further Reading</h2>
+      <p>Learn more about the project:</p>
+      <a class="button" href="https://www.codeforamerica.org/summit" target="_blank" rel="noopener">Summit 2024 Presentation</a>
+    </section>
+  </main>
 </body>
 </html>

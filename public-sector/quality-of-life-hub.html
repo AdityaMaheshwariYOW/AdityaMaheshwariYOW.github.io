@@ -2,31 +2,84 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Quality of Life Hub</title>
+  <title>Quality of Life Hub – Aditya Maheshwari</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../style.css">
+  <style>
+    /* Base layout matching portfolio */
+    body {
+      font-family: 'Open Sans', sans-serif;
+      margin: 0; padding: 0;
+      color: #333;
+    }
+    header nav {
+      display: flex; gap: 1rem;
+      background: #fafafa; padding: 1rem;
+      position: sticky; top: 0; z-index: 10;
+    }
+    header a { text-decoration: none; font-weight: 600; color: #555; }
+    header a:hover { color: #000; }
+    .hero {
+      padding: 2rem 1rem; text-align: center;
+      background: #e0e7ef; color: #111;
+    }
+    .hero h1 { font-size: 2rem; margin-bottom: 0.5rem; }
+    .hero p { max-width: 600px; margin: auto; line-height: 1.6; }
+    main {
+      max-width: 800px; margin: 2rem auto; padding: 0 1rem;
+    }
+    section { margin-bottom: 2rem; }
+    h2 { font-size: 1.5rem; margin-bottom: 0.5rem; color: #111; }
+    ul { margin: 0.5rem 0 0 1.25rem; line-height: 1.6; }
+    a.button {
+      display: inline-block; margin-top: 1rem; padding: 0.5rem 1rem;
+      background: #007acc; color: #fff; text-decoration: none;
+      border-radius: 0.5rem;
+    }
+  </style>
 </head>
 <body>
-<header>
-  <nav>
-    <a href="../index.html">Home</a>
-    <a href="../about.html">About</a>
-    <a href="index.html">Public Sector</a>
-    <a href="../consulting/index.html">Consulting</a>
-    <a href="../teaching/index.html">Teaching</a>
-    <a href="../projects/index.html">Projects</a>
-    <a href="../research/index.html">Research</a>
-  </nav>
-</header>
-<nav class="subnav">
-  <a href="quality-of-life-hub.html">Quality of Life Hub</a>
-  <a href="pco-email-ai-pipeline.html">PCO Email AI Pipeline</a>
-  <a href="auto-tax-service.html">Auto Tax Service</a>
-</nav>
-<main>
-  <h1>Quality of Life Hub</h1>
-  <p>Placeholder summary for Quality of Life Hub.</p>
-</main>
+  <header>
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="../public-sector/index.html">Public Sector</a>
+      <a href="index.html">Quality of Life Hub</a>
+      <a href="../consulting/index.html">Private Sector</a>
+      <a href="../teaching/index.html">Teaching</a>
+      <a href="../projects/index.html">Projects</a>
+      <a href="../research/index.html">Research</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Quality of Life Hub</h1>
+    <p>A user-facing platform transforming Canadian well-being data into real-time insights for policymakers and citizens alike.</p>
+  </section>
+
+  <main>
+    <section>
+      <h2>Executive Summary</h2>
+      <ul>
+        <li>Doubled user engagement year-over-year by curating personalized dashboards from survey &amp; administrative data.</li>
+        <li>Halved operational overhead by automating report generation and implementing templated content workflows.</li>
+        <li>Launched three interdepartmental modernization initiatives, reducing time-to-insight and improving policy responsiveness.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Technical Overview</h2>
+      <ul>
+        <li><strong>Data Integration:</strong> Consolidated multi-source datasets (surveys, tax records, health stats) via nightly ETL in R and Git-backed workflows.</li>
+        <li><strong>Dashboarding & UX:</strong> Built interactive PowerBI reports with custom JavaScript/CSS components and Adobe Analytics for user-event tracking.</li>
+        <li><strong>Automation & CI/CD:</strong> Deployed RMarkdown pipelines for templated content, orchestrated by cron jobs, and version-controlled via Git.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Further Reading</h2>
+      <p>Explore the official Statistics Canada portal:</p>
+      <a class="button" href="https://www160.statcan.gc.ca/index-eng.htm" target="_blank" rel="noopener">Visit Quality of Life Hub</a>
+    </section>
+  </main>
 </body>
 </html>
