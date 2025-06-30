@@ -1,8 +1,0 @@
----
-title: "Teaching - Project 2"
-output: html_document
----
-
-# Teaching - Project 2
-
-Description of teaching project 2.
