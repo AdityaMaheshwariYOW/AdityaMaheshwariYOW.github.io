@@ -5,45 +5,112 @@
   <title>Aditya Maheshwari – Portfolio</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Layout */
+    body {
+      font-family: 'Open Sans', sans-serif;
+      margin: 0; padding: 0;
+      color: #333;
+    }
+    header nav {
+      display: flex; gap: 1rem;
+      background: #fafafa; padding: 1rem;
+      position: sticky; top: 0; z-index: 10;
+    }
+    header a {
+      text-decoration: none; font-weight: 600; color: #555;
+    }
+    header a:hover { color: #000; }
+    .hero {
+      padding: 4rem 2rem; text-align: center;
+      background: #f0f4f8;
+    }
+    .hero h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
+    .hero p { font-size: 1.125rem; max-width: 600px; margin: auto; line-height: 1.6; }
+    .hero a { color: #007acc; text-decoration: underline; }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      padding: 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .card {
+      display: flex; flex-direction: column;
+      background: #fff; padding: 1.5rem;
+      border-radius: 0.75rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      text-decoration: none; color: inherit;
+      transition: transform .2s, box-shadow .2s;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+    }
+    .card h2 {
+      margin-top: 0; margin-bottom: 0.75rem;
+      font-size: 1.5rem; color: #111;
+    }
+    .card p { line-height: 1.6; flex-grow: 1; }
+  </style>
 </head>
 <body>
-<header>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="public-sector/index.html">Public Sector</a>
-    <a href="consulting/index.html">Consulting</a>
-    <a href="teaching/index.html">Teaching</a>
-    <a href="projects/index.html">Projects</a>
-    <a href="research/index.html">Research</a>
-  </nav>
-</header>
-<section class="hero">
-  <h1>Aditya Maheshwari</h1>
-  <p>Data Scientist – Quality of Life Hub, AI & NLP pipelines, Consulting & Teaching</p>
-</section>
-<div class="cards">
-  <a class="card" href="public-sector/index.html">
-    <h2>Public Sector</h2>
-    <p>Quality of Life Hub • PCO Email AI • Auto-Tax Service</p>
-  </a>
-  <a class="card" href="consulting/index.html">
-    <h2>Consulting</h2>
-    <p>Sentiment Pipeline • Inflation Model • Airport Optimization • Domain Classifier • Trading Automation</p>
-  </a>
-  <a class="card" href="teaching/index.html">
-    <h2>Teaching</h2>
-    <p>AI & ML Bootcamps @ McCombs, Ottawa & Carleton</p>
-  </a>
-  <a class="card" href="projects/index.html">
-    <h2>Projects</h2>
-    <p>Posture Nudge App • RL Traffic Thesis • Poster Presentation</p>
-  </a>
-  <a class="card" href="research/index.html">
-    <h2>Research</h2>
-    <p>CAMFED RCT Analysis • Survey AI Evaluation • Book Chapters</p>
-  </a>
-</div>
+  <header>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="public-sector/index.html">Public Sector</a>
+      <a href="consulting/index.html">Private Sector</a>
+      <a href="teaching/index.html">Teaching</a>
+      <a href="projects/index.html">Projects</a>
+      <a href="research/index.html">Research</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>I'm Aditya.</h1>
+    <p>
+      After years of tackling quirky data science puzzles, I’ve built this portfolio to showcase my best work and funnel new project opportunities—let’s talk at 
+      <a href="mailto:aditya.yow@gmail.com">aditya.yow@gmail.com</a>!
+    </p>
+  </section>
+
+  <main class="cards">
+    <a class="card" href="public-sector/index.html">
+      <h2>Public Sector</h2>
+      <p>
+        I’ve learned to support social-sector objectives using data: improving engagement on user-facing platforms like the Quality of Life Hub, developing cutting-edge AI for reading the Prime Minister’s public inbox, and wrangling large-scale tax data to identify populations in need of assistance.
+      </p>
+    </a>
+
+    <a class="card" href="consulting/index.html">
+      <h2>Private Sector</h2>
+      <p>
+        I help clients take the next step in their data-driven journey—assessing and prototyping ML solutions (from sentiment pipelines and DGA classifiers to airport-operations optimizations) and shoring up end-to-end pipelines so insights flow seamlessly.
+      </p>
+    </a>
+
+    <a class="card" href="teaching/index.html">
+      <h2>Teaching</h2>
+      <p>
+        I began by designing a 4-week intensive advanced-analytics bootcamp (2 hours/day), then scaled delivery by hiring and managing additional instructors. Now I teach professional development courses at the University of Texas, covering AI, machine learning, and ML engineering.
+      </p>
+    </a>
+
+    <a class="card" href="projects/index.html">
+      <h2>Projects</h2>
+      <p>
+        My shot at product building—creating a posture-monitoring app with LSTMs and rotation sensors to track trends, applying deep RL to autonomous vehicles for smoother highway traffic, and crafting an AI-powered expense tracker that uses LLMs to auto-categorize transactions.
+      </p>
+    </a>
+
+    <a class="card" href="research/index.html">
+      <h2>Research</h2>
+      <p>
+        My research applies data science to policymaking and development economics—using causal forests to extract insights from RCTs and topic modelling to analyze open-text health survey feedback.
+      </p>
+    </a>
+  </main>
 </body>
 </html>
