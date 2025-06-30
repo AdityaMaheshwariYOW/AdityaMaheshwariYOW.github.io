@@ -7,33 +7,24 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap" rel="stylesheet">
   <style>
     /* Consistent portfolio layout */
-    body {
-      font-family: 'Open Sans', sans-serif;
-      margin: 0; padding: 0;
-      color: #333;
-    }
-    header nav {
-      display: flex; gap: 1rem;
-      background: #fafafa; padding: 1rem;
-      position: sticky; top: 0; z-index: 10;
-    }
+    body { font-family: 'Open Sans', sans-serif; margin: 0; padding: 0; color: #333; }
+    header nav { display: flex; gap: 1rem; background: #fafafa; padding: 1rem; position: sticky; top: 0; z-index: 10; }
     header a { text-decoration: none; font-weight: 600; color: #555; }
     header a:hover { color: #000; }
-    .hero {
-      padding: 2rem 1rem; text-align: center;
-      background: #e0e7ef; color: #111;
-    }
+    .hero { padding: 2rem 1rem; text-align: center; background: #e0e7ef; color: #111; }
     .hero h1 { font-size: 2rem; margin-bottom: 0.5rem; }
     .hero p { max-width: 600px; margin: auto; line-height: 1.6; }
     main { max-width: 800px; margin: 2rem auto; padding: 0 1rem; }
     section { margin-bottom: 2rem; }
     h2 { font-size: 1.5rem; margin-bottom: 0.5rem; color: #111; }
     ul { margin: 0.5rem 0 0 1.25rem; line-height: 1.6; }
-    a.button {
-      display: inline-block; margin-top: 1rem; padding: 0.5rem 1rem;
-      background: #007acc; color: #fff; text-decoration: none;
-      border-radius: 0.5rem;
-    }
+    a.button { display: inline-block; margin-top: 1rem; padding: 0.5rem 1rem; background: #007acc; color: #fff; text-decoration: none; border-radius: 0.5rem; }
+    /* Card grid for related projects */
+    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; padding: 1rem 0; }
+    .card { display: flex; flex-direction: column; background: #fff; padding: 1rem; border-radius: 0.5rem; box-shadow: 0 2px 6px rgba(0,0,0,0.1); text-decoration: none; color: inherit; transition: transform .2s, box-shadow .2s; }
+    .card:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.15); }
+    .card h3 { margin: 0 0 0.5rem; font-size: 1.25rem; color: #111; }
+    .card p { margin: 0; line-height: 1.4; flex-grow: 1; }
   </style>
 </head>
 <body>
@@ -60,25 +51,78 @@
     <section>
       <h2>Executive Summary</h2>
       <ul>
-        <li>Developed a robust ML workflow to classify topics and sentiment in ~10K PMO emails daily, enabling rapid policy insight.</li>
-        <li>Presented outcomes at Code for America Summit 2024, demonstrating government-grade AI to public-sector peers.</li>
-        <li>Established reusable infrastructure and best practices for future ML initiatives across federal departments.</li>
+        <li>Processed and classified ~10,000 PMO emails per day into key topics and sentiment trends, accelerating policy insights.</li>
+        <li>Presented outcomes at Code for America Summit 2024, demonstrating government-grade AI for public engagement analysis.</li>
+        <li>Established a reusable, scalable infrastructure blueprint for future federal ML projects.</li>
       </ul>
     </section>
 
     <section>
       <h2>Technical Overview</h2>
       <ul>
-        <li><strong>Data Ingestion & Preprocessing:</strong> Automated email retrieval via secure API, preprocessed text in Databricks/Spark (tokenization, stop-word removal).</li>
-        <li><strong>Modeling & NLP:</strong> Utilized BERTopic for dynamic topic extraction; fine-tuned HuggingFace transformers for sentiment classification.</li>
-        <li><strong>Deployment & Monitoring:</strong> Packaged inference as Azure Functions, scheduled retraining via Azure ML Pipelines, visualized results in PowerBI with custom alerts.</li>
+        <li><strong>Data Pipeline:</strong> Automated secure email ingestion via Azure Functions and Databricks, cleansing and normalizing text with Spark.</li>
+        <li><strong>Modeling:</strong> Implemented BERTopic for dynamic topic modeling and fine-tuned Hugging Face transformers for sentiment classification.</li>
+        <li><strong>Deployment & Visualization:</strong> Deployed inference services in Azure ML Pipelines; visualized results in PowerBI with custom alerts and dashboards.</li>
       </ul>
     </section>
 
     <section>
       <h2>Further Reading</h2>
-      <p>Learn more about the project:</p>
+      <p>See the presentation and code examples:</p>
       <a class="button" href="https://www.codeforamerica.org/summit" target="_blank" rel="noopener">Summit 2024 Presentation</a>
+      <a class="button" href="https://github.com/yourrepo/pmo-email-ai" target="_blank" rel="noopener">GitHub Repository</a>
+    </section>
+
+    <section>
+      <h2>Other Public Sector Projects</h2>
+      <div class="cards">
+        <a class="card" href="quality-of-life-hub.html">
+          <h3>Quality of Life Hub</h3>
+          <p>A user-facing platform transforming well-being data into insights for Canadians and policymakers.</p>
+        </a>
+        <a class="card" href="auto-tax-service.html">
+          <h3>Auto-Tax Navigator</h3>
+          <p>Automated tax filing for social assistance recipients using T5007 slip data to improve benefit uptake.</p>
+        </a>
+        <a class="card" href="pco-email-ai-pipeline.html">
+          <h3>Inbox AI Assistant</h3>
+          <p>Scalable ML pipeline to analyze daily PMO emails for topics and sentiment.</p>
+        </a>
+      </div>
+    </section>
+      <section>
+      <h2>Other Public Sector Projects</h2>
+      <div class="cards">
+        <a class="card" href="quality-of-life-hub.html">
+          <h3>Quality of Life Hub</h3>
+          <p>Transforming social and administrative data into interactive dashboards that inform policymakers and citizens.</p>
+        </a>
+        <a class="card" href="pco-email-ai-pipeline.html">
+          <h3>Inbox AI Assistant</h3>
+          <p>Scalable ML pipeline to analyze daily PMO emails for topics and sentiment.</p>
+        </a>
+        <a class="card" href="auto-tax-service.html">
+          <h3>Auto-Tax Navigator</h3>
+          <p>Automated tax filing for social assistance recipients via T5007 slip data.</p>
+        </a>
+      </div>
+    </section>
+      <section>
+      <h2>Other Public Sector Projects</h2>
+      <div class="cards">
+        <a class="card" href="quality-of-life-hub.html">
+          <h3>Quality of Life Hub</h3>
+          <p>Transforming social and administrative data into interactive dashboards that inform policymakers and citizens.</p>
+        </a>
+        <a class="card" href="pco-email-ai-pipeline.html">
+          <h3>Inbox AI Assistant</h3>
+          <p>Scalable ML pipeline to analyze daily PMO emails for topics and sentiment.</p>
+        </a>
+        <a class="card" href="auto-tax-service.html">
+          <h3>Auto-Tax Navigator</h3>
+          <p>Automated tax filing for social assistance recipients via T5007 slip data.</p>
+        </a>
+      </div>
     </section>
   </main>
 </body>
