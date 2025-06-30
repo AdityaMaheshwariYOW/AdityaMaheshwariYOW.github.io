@@ -6,23 +6,50 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap" rel="stylesheet">
   <style>
-    /* Consistent portfolio layout */
     body { font-family: 'Open Sans', sans-serif; margin: 0; padding: 0; color: #333; }
-    header nav { display: flex; gap: 1rem; background: #fafafa; padding: 1rem; position: sticky; top: 0; z-index: 10; }
+    header nav {
+      display: flex; gap: 1rem;
+      background: #fafafa; padding: 1rem;
+      position: sticky; top: 0; z-index: 10;
+    }
     header a { text-decoration: none; font-weight: 600; color: #555; }
     header a:hover { color: #000; }
-    .hero { padding: 2rem 1rem; text-align: center; background: #e0e7ef; color: #111; }
+
+    .hero {
+      padding: 2rem 1rem; text-align: center;
+      background: #e0e7ef; color: #111;
+    }
     .hero h1 { font-size: 2rem; margin-bottom: 0.5rem; }
     .hero p { max-width: 600px; margin: auto; line-height: 1.6; }
+
     main { max-width: 800px; margin: 2rem auto; padding: 0 1rem; }
     section { margin-bottom: 2rem; }
     h2 { font-size: 1.5rem; margin-bottom: 0.5rem; color: #111; }
     ul { margin: 0.5rem 0 0 1.25rem; line-height: 1.6; }
-    a.button { display: inline-block; margin-top: 1rem; padding: 0.5rem 1rem; background: #007acc; color: #fff; text-decoration: none; border-radius: 0.5rem; }
-    /* Card grid for related projects */
-    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; padding: 1rem 0; }
-    .card { display: flex; flex-direction: column; background: #fff; padding: 1rem; border-radius: 0.5rem; box-shadow: 0 2px 6px rgba(0,0,0,0.1); text-decoration: none; color: inherit; transition: transform .2s, box-shadow .2s; }
-    .card:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.15); }
+    a.button {
+      display: inline-block; margin-top: 1rem; padding: 0.5rem 1rem;
+      background: #007acc; color: #fff; text-decoration: none;
+      border-radius: 0.5rem;
+    }
+
+    /* Related projects cards */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1rem;
+      padding: 1rem 0;
+    }
+    .card {
+      background: #fff; padding: 1rem;
+      border-radius: 0.5rem; box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      text-decoration: none; color: inherit;
+      transition: transform .2s, box-shadow .2s;
+      display: flex; flex-direction: column;
+    }
+    .card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
     .card h3 { margin: 0 0 0.5rem; font-size: 1.25rem; color: #111; }
     .card p { margin: 0; line-height: 1.4; flex-grow: 1; }
   </style>
@@ -32,9 +59,6 @@
     <nav>
       <a href="../index.html">Home</a>
       <a href="../public-sector/index.html">Public Sector</a>
-      <a href="pco-email-ai-pipeline.html">Inbox AI Assistant</a>
-      <a href="auto-tax-service.html">Auto-Tax Navigator</a>
-      <a href="quality-of-life-hub.html">Quality of Life Hub</a>
       <a href="../consulting/index.html">Private Sector</a>
       <a href="../teaching/index.html">Teaching</a>
       <a href="../projects/index.html">Projects</a>
@@ -78,49 +102,15 @@
       <div class="cards">
         <a class="card" href="quality-of-life-hub.html">
           <h3>Quality of Life Hub</h3>
-          <p>A user-facing platform transforming well-being data into insights for Canadians and policymakers.</p>
-        </a>
-        <a class="card" href="auto-tax-service.html">
-          <h3>Auto-Tax Navigator</h3>
-          <p>Automated tax filing for social assistance recipients using T5007 slip data to improve benefit uptake.</p>
-        </a>
-        <a class="card" href="pco-email-ai-pipeline.html">
-          <h3>Inbox AI Assistant</h3>
-          <p>Scalable ML pipeline to analyze daily PMO emails for topics and sentiment.</p>
-        </a>
-      </div>
-    </section>
-      <section>
-      <h2>Other Public Sector Projects</h2>
-      <div class="cards">
-        <a class="card" href="quality-of-life-hub.html">
-          <h3>Quality of Life Hub</h3>
           <p>Transforming social and administrative data into interactive dashboards that inform policymakers and citizens.</p>
-        </a>
-        <a class="card" href="pco-email-ai-pipeline.html">
-          <h3>Inbox AI Assistant</h3>
-          <p>Scalable ML pipeline to analyze daily PMO emails for topics and sentiment.</p>
         </a>
         <a class="card" href="auto-tax-service.html">
           <h3>Auto-Tax Navigator</h3>
           <p>Automated tax filing for social assistance recipients via T5007 slip data.</p>
         </a>
-      </div>
-    </section>
-      <section>
-      <h2>Other Public Sector Projects</h2>
-      <div class="cards">
-        <a class="card" href="quality-of-life-hub.html">
-          <h3>Quality of Life Hub</h3>
-          <p>Transforming social and administrative data into interactive dashboards that inform policymakers and citizens.</p>
-        </a>
         <a class="card" href="pco-email-ai-pipeline.html">
           <h3>Inbox AI Assistant</h3>
           <p>Scalable ML pipeline to analyze daily PMO emails for topics and sentiment.</p>
-        </a>
-        <a class="card" href="auto-tax-service.html">
-          <h3>Auto-Tax Navigator</h3>
-          <p>Automated tax filing for social assistance recipients via T5007 slip data.</p>
         </a>
       </div>
     </section>
