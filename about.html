@@ -2,53 +2,60 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>About – Aditya Maheshwari</title>
+  <title>Aditya Maheshwari – Portfolio</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../style.css">
   <style>
-    /* Timeline styles */
-    .timeline {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
+    /* Layout from index for consistency */
+    body {
+      font-family: 'Open Sans', sans-serif;
+      margin: 0; padding: 0;
+      color: #333;
+    }
+    header nav {
+      display: flex; gap: 1rem;
+      background: #fafafa; padding: 1rem;
+      position: sticky; top: 0; z-index: 10;
+    }
+    header a {
+      text-decoration: none; font-weight: 600; color: #555;
+    }
+    header a:hover { color: #000; }
+    /* About page layout */
+    .about-container {
+      max-width: 900px;
       margin: 2rem auto;
-      max-width: 800px;
       padding: 0 1rem;
     }
-    .step {
-      background: #fff;
-      padding: 1rem 1.5rem;
-      border-radius: 0.5rem;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-      position: relative;
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      margin-bottom: 2rem;
+    }
+    .col {
+      flex: 1;
+      min-width: 280px;
+    }
+    .col.image img {
       width: 100%;
-      margin-bottom: 1rem;
+      border-radius: 0.5rem;
+      object-fit: cover;
     }
-    .step:not(:last-child)::after {
-      content: '\2193'; /* downward arrow */
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-      bottom: -1rem;
+    .row:nth-child(even) .col.text {
+      order: 2;
+    }
+    .row:nth-child(even) .col.image {
+      order: 1;
+    }
+    .about-section h2 {
       font-size: 1.5rem;
-      color: #888;
-    }
-    .step h3 {
-      margin-top: 0;
-      font-size: 1.25rem;
+      margin-bottom: 0.5rem;
       color: #111;
     }
-    .step p {
-      margin: 0.5rem 0 0;
+    .about-section p {
       line-height: 1.6;
-    }
-    /* SoundCloud embed styling */
-    .soundcloud {
-      margin-top: 1rem;
-      width: 100%;
-      height: 166px;
-      border: none;
+      margin: 0.5rem 0;
     }
   </style>
 </head>
@@ -65,50 +72,62 @@
     </nav>
   </header>
 
-  <main>
-    <h1 style="text-align:center; margin-top:2rem;">About Me</h1>
-    <div class="timeline">
-      <div class="step">
-        <h3>Early Life & Travels</h3>
-        <p>Grew up in Ottawa with annual trips to India visiting grandparents, sparking my global curiosity.</p>
+  <section class="hero" style="padding: 2rem 1rem; text-align: center; background: #f0f4f8;">
+    <h1 style="font-size:2rem; margin-bottom:0.5rem;">About Me</h1>
+    <p style="font-size:1rem; max-width:600px; margin:auto; line-height:1.6;">
+      A journey from Ottawa to London—pivoting from cello performance to Mathematics & Finance, discovering data science through trading-floor co‑ops, consulting, and impactful government roles. Now freelancing in educational development and financial services, I’m passionate about user-focused data collection and compelling visualizations.
+    </p>
+  </section>
+
+  <main class="about-container">
+
+    <div class="row about-section">
+      <div class="col image">
+        <!-- add image: Ottawa & India -->
+        <img src="../assets/ottawa-india.jpg" alt="Ottawa and India travels">
       </div>
-      <div class="step">
-        <h3>Cello & Pivot</h3>
-        <p>Planned a cello performance degree in Manhattan—but pivoted last-minute to Mathematics & Finance. <a href="https://soundcloud.com/aditya-maheshwari-680890901/sets/bachsuitesoct2020" target="_blank" rel="noopener">Listen to Bach suites</a>.</p>
-      </div>
-      <div class="step">
-        <h3>First Co-op</h3>
-        <p>Co-op as a Data Scientist on the trading floor ignited my passion for data-driven problem solving.</p>
-      </div>
-      <div class="step">
-        <h3>Masters & Research</h3>
-        <p>Master’s thesis on posture prediction using LSTMs and sensors—led by a professor who then brought me into consulting.</p>
-      </div>
-      <div class="step">
-        <h3>Consulting Kickoff</h3>
-        <p>Started prototyping ML solutions for clients, shaping my approach to embedding analytics in real-world workflows.</p>
-      </div>
-      <div class="step">
-        <h3>Government Career</h3>
-        <p>During COVID, fascinated by CERB economic relief, I accepted a permanent role rather than a contract.</p>
-      </div>
-      <div class="step">
-        <h3>CRA Innovation</h3>
-        <p>At CRA, supported a \$10M innovation fund—built solutions to simplify tax filing for benefit recipients.</p>
-      </div>
-      <div class="step">
-        <h3>PCO AI</h3>
-        <p>Developed cutting-edge AI to parse the Prime Minister’s public inbox at the Privy Council Office.</p>
-      </div>
-      <div class="step">
-        <h3>Quality of Life Hub</h3>
-        <p>Led StatCan’s user-facing Quality of Life Hub, turning data into actionable social insights.</p>
-      </div>
-      <div class="step">
-        <h3>Current & Freelance</h3>
-        <p>Recently married and relocated to London—now freelancing in educational course development and financial services projects.</p>
+      <div class="col text">
+        <h2>Roots & Pivot</h2>
+        <p>Grew up in Ottawa with annual visits to my grandparents in India—sparking my global curiosity.</p>
+        <p>Originally set to study cello performance in Manhattan, I pivoted last-minute to Mathematics & Finance.  <a href="https://soundcloud.com/aditya-maheshwari-680890901/sets/bachsuitesoct2020" target="_blank" rel="noopener">Listen to my Bach suites</a>.</p>
       </div>
     </div>
+
+    <div class="row about-section">
+      <div class="col text">
+        <h2>Data Science Discovery</h2>
+        <p>My first co-op as a Data Scientist on a trading floor ignited my passion for data. A Master’s project predicting posture with LSTMs and sensors then led me into consulting.</p>
+      </div>
+      <div class="col image">
+        <!-- add image: posture project -->
+        <img src="../assets/posture-consulting.jpg" alt="Posture project and consulting">
+      </div>
+    </div>
+
+    <div class="row about-section">
+      <div class="col image">
+        <!-- add image: CERB & CRA -->
+        <img src="../assets/cerb-cra.jpg" alt="CERB and CRA">
+      </div>
+      <div class="col text">
+        <h2>Government Impact</h2>
+        <p>During COVID, I joined the CRA to support CERB relief—helping administer a $10 M innovation fund to simplify tax filing.</p>
+        <p>I then built AI at the Privy Council Office to parse the Prime Minister’s public inbox and led the Quality of Life Hub at Statistics Canada to turn social data into insights.</p>
+      </div>
+    </div>
+
+    <div class="row about-section">
+      <div class="col text">
+        <h2>Freelance & Future</h2>
+        <p>Now married and in London, I’m freelancing—developing courses on ocean analytics, collaborating with authors, and driving projects in financial services.</p>
+        <p>I’m eager to create user-centric data pipelines and craft visualizations that make data-driven stories come alive.</p>
+      </div>
+      <div class="col image">
+        <!-- add image: London freelance -->
+        <img src="../assets/freelance-london.jpg" alt="Freelance in London">
+      </div>
+    </div>
+
   </main>
 </body>
 </html>
