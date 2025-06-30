@@ -5,29 +5,110 @@
   <title>About – Aditya Maheshwari</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    /* Timeline styles */
+    .timeline {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin: 2rem auto;
+      max-width: 800px;
+      padding: 0 1rem;
+    }
+    .step {
+      background: #fff;
+      padding: 1rem 1.5rem;
+      border-radius: 0.5rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      position: relative;
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+    .step:not(:last-child)::after {
+      content: '\2193'; /* downward arrow */
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: -1rem;
+      font-size: 1.5rem;
+      color: #888;
+    }
+    .step h3 {
+      margin-top: 0;
+      font-size: 1.25rem;
+      color: #111;
+    }
+    .step p {
+      margin: 0.5rem 0 0;
+      line-height: 1.6;
+    }
+    /* SoundCloud embed styling */
+    .soundcloud {
+      margin-top: 1rem;
+      width: 100%;
+      height: 166px;
+      border: none;
+    }
+  </style>
 </head>
 <body>
-<header>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="public-sector/index.html">Public Sector</a>
-    <a href="consulting/index.html">Consulting</a>
-    <a href="teaching/index.html">Teaching</a>
-    <a href="projects/index.html">Projects</a>
-    <a href="research/index.html">Research</a>
-  </nav>
-</header>
-<main>
-  <h1>About Me</h1>
-  <p>Data Scientist with extensive experience leading AI & NLP initiatives in the public sector, consulting on ML pipelines, and teaching data science bootcamps.</p>
-  <p>Connect:</p>
-  <ul>
-    <li><a href="https://linkedin.com/in/aditya-maheshwari" target="_blank">LinkedIn</a></li>
-    <li><a href="https://github.com/adityamaheshwari" target="_blank">GitHub</a></li>
-    <li><a href="mailto:aditya@example.com">Email</a></li>
-  </ul>
-</main>
+  <header>
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="../public-sector/index.html">Public Sector</a>
+      <a href="../consulting/index.html">Private Sector</a>
+      <a href="../teaching/index.html">Teaching</a>
+      <a href="../projects/index.html">Projects</a>
+      <a href="../research/index.html">Research</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1 style="text-align:center; margin-top:2rem;">About Me</h1>
+    <div class="timeline">
+      <div class="step">
+        <h3>Early Life & Travels</h3>
+        <p>Grew up in Ottawa with annual trips to India visiting grandparents, sparking my global curiosity.</p>
+      </div>
+      <div class="step">
+        <h3>Cello & Pivot</h3>
+        <p>Planned a cello performance degree in Manhattan—but pivoted last-minute to Mathematics & Finance. <a href="https://soundcloud.com/aditya-maheshwari-680890901/sets/bachsuitesoct2020" target="_blank" rel="noopener">Listen to Bach suites</a>.</p>
+      </div>
+      <div class="step">
+        <h3>First Co-op</h3>
+        <p>Co-op as a Data Scientist on the trading floor ignited my passion for data-driven problem solving.</p>
+      </div>
+      <div class="step">
+        <h3>Masters & Research</h3>
+        <p>Master’s thesis on posture prediction using LSTMs and sensors—led by a professor who then brought me into consulting.</p>
+      </div>
+      <div class="step">
+        <h3>Consulting Kickoff</h3>
+        <p>Started prototyping ML solutions for clients, shaping my approach to embedding analytics in real-world workflows.</p>
+      </div>
+      <div class="step">
+        <h3>Government Career</h3>
+        <p>During COVID, fascinated by CERB economic relief, I accepted a permanent role rather than a contract.</p>
+      </div>
+      <div class="step">
+        <h3>CRA Innovation</h3>
+        <p>At CRA, supported a \$10M innovation fund—built solutions to simplify tax filing for benefit recipients.</p>
+      </div>
+      <div class="step">
+        <h3>PCO AI</h3>
+        <p>Developed cutting-edge AI to parse the Prime Minister’s public inbox at the Privy Council Office.</p>
+      </div>
+      <div class="step">
+        <h3>Quality of Life Hub</h3>
+        <p>Led StatCan’s user-facing Quality of Life Hub, turning data into actionable social insights.</p>
+      </div>
+      <div class="step">
+        <h3>Current & Freelance</h3>
+        <p>Recently married and relocated to London—now freelancing in educational course development and financial services projects.</p>
+      </div>
+    </div>
+  </main>
 </body>
 </html>
