@@ -1,8 +1,0 @@
----
-title: "Consulting - Project 3"
-output: html_document
----
-
-# Consulting - Project 3
-
-Description of consulting project 3.
